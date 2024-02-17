@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration Form</title>
+    <style>
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            height: 100vh;
+        }
+        .login-container, .register-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #007bff, #6a11cb);
+        }
+        .register-container {
+            background: linear-gradient(to right, #ff512f, #dd2476);
+        }
+        .form-login, .form-register {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 320px;
+        }
+        .form-login h2, .form-register h2 {
+            margin: 0 0 20px;
+            text-align: center;
+        }
+        input[type="text"], input[type="password"], input[type="email"], button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        nav {
+    background-color: #000000;
+    padding: 20px 0;
+    text-align: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 30px;
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+}
+
+nav ul li a:hover, .explore-button:hover {
+    background-color: #7b00ff;
+    color: #ffffff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+}
+
+.about-us, .contact-us {
+    flex: 1; /* Each section will take up half the width of the footer */
+    padding: 20px;
+}
+
+.about-us h2, .contact-us h2 {
+    text-align: left;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.about-us p, .contact-us form {
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+    .about-us, .contact-us {
+        flex: none; /* Let them take the full width */
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hotels.html">Hotels</a></li>
+                <li><a href="entertainment.html">Entertainment</a></li>
+                <li><a href="competition.html">Events</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="login-container">
+            <form class="form-login">
+                <h2>Login</h2>
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div class="register-container">
+            <form class="form-register">
+                <h2>Register</h2>
+                <input type="text" placeholder="Username" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+</body>
+<footer class="footer-container">
+    <div class="about-us">
+        <h2>About Us</h2>
+        <p>Welcome to the 2024 Paris Olympic Games - an event celebrating athletic prowess and international unity. Our mission is to create an immersive experience for every visitor, combining the thrill of sport with the cultural richness of Paris. Join us in this historic event for unforgettable memories.</p>
+        <p>infoparisolympic@gmail.com</p>
+    </div>
+    <div class="contact-us">
+        <h2>Contact Us</h2>
+        <form action="/submit_contact_form" method="post">
+            <label for="Name">Name :</label>
+                <input type="text" id="Name" name="name" required>
+                <label for="Email">Email :</label>
+                <input type="email" id="Email" name="email" required>
+                <label for="Message">Message :</label>
+                <textarea id="text" name="message" required></textarea>
+                <br>
+                <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+</footer>
+</html>
